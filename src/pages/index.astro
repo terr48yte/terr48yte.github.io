@@ -1,0 +1,10 @@
+---
+import Layout from "../layouts/Layout.astro";
+import DropdownMenu from "../components/dropdown-menu";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <DropdownMenu client:only="react" />
+  </main>
+</Layout>

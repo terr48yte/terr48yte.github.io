@@ -8,11 +8,7 @@ export default withMT({
     "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        primary: "#81d4fa",
-      },
-    },
+    extend: {},
   },
   plugins: [],
 });

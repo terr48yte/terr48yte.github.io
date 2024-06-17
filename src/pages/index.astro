@@ -1,10 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import DropdownMenu from "../components/dropdown-menu";
+import BanHead from "@components/banhead";
+import logo from "@assets/logo.png";
+
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-    <DropdownMenu client:only="react" />
+    <!-- <DropdownMenu client:only="react" /> -->
+    <BanHead
+      client:only="react"
+      img={logo.src}
+      slogan="Information Technology Club of SMA Negeri 48 Jakarta"
+      title="TERR48YTE"
+    />
+    <!-- <img src={logo.src}/> -->
   </main>
 </Layout>

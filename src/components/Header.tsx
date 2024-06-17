@@ -30,6 +30,7 @@ export default function Header() {
         {props.title}
       </Typography>
       <Typography
+        variant="paragraph"
         placeholder={undefined}
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}

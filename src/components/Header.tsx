@@ -1,4 +1,5 @@
 import { Typography } from "@material-tailwind/react";
+import logo from "@assets/logo.png";
 
 interface Props {
   img: string;
@@ -6,7 +7,13 @@ interface Props {
   slogan: string;
 }
 
-export default function Header(props: Readonly<Props>) {
+const props: Props = {
+  img: logo.src,
+  slogan: "Information Technology Club of SMA Negeri 48 Jakarta",
+  title: "TERR48YTE",
+};
+
+export default function Header() {
   return (
     <div className="flex flex-col items-center justify-center gap-2 group/head text-center">
       <img

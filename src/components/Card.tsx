@@ -23,7 +23,7 @@ type Props = {
   url: string;
 }[];
 
-const links: Props = [
+const props: Props = [
   {
     name: "Website",
     icon: <Globe size={40} color="#000100" />,
@@ -64,73 +64,83 @@ export default function CardWithLink() {
   const [value, copy] = useCopyToClipboard();
   const [copied, setCopied] = useState<number | null>(null);
 
-  return links.map((link, i) => (
-    <Card
-      className="mt-6 w-96"
-      placeholder={undefined}
-      onPointerEnterCapture={undefined}
-      onPointerLeaveCapture={undefined}
-    >
-      <CardBody
-        placeholder={undefined}
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
-      >
-        <div className="flex items-center gap-4">
-          {link.icon}
-          <Typography
-            variant="h5"
-            color="blue-gray"
+  return (
+    <div className="grid flex-row md:flex-col md:grid-cols-2 xl:grid-cols-3 gap-8">
+      {props &&
+        props.map((link, i) => (
+          <Card
+            key={i}
+            className="mt-6 w-96"
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
           >
-            {link.name}
-          </Typography>
-        </div>
-        <Typography
-          id="link"
-          placeholder={undefined}
-          onPointerEnterCapture={undefined}
-          onPointerLeaveCapture={undefined}
-          variant="paragraph"
-          className="mt-4"
-        >
-          {link.url}
-        </Typography>
-      </CardBody>
-      <CardFooter
-        className="pt-0"
-        placeholder={undefined}
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
-      >
-        <div className="flex items-center justify-end">
-          <IconButton
-            onClick={() => {
-              copy(link.url);
-              setCopied(i);
-            }}
-            onMouseLeave={() => setCopied(null)}
-            variant="text"
-            placeholder={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
-          >
-            {copied === i ? <Check /> : <Copy />}
-          </IconButton>
-          <a href={link.url} target="_blank">
-            <IconButton
-              variant="text"
+            <CardBody
               placeholder={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
             >
-              <ExternalLink />
-            </IconButton>
-          </a>
-        </div>
-      </CardFooter>
-    </Card>
-  ));
+              <div className="flex items-center gap-4">
+                {link.icon}
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+                >
+                  {link.name}
+                </Typography>
+              </div>
+              <Typography
+                id="link"
+                placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
+                variant="paragraph"
+                className="mt-4"
+              >
+                {link.url}
+              </Typography>
+            </CardBody>
+            <CardFooter
+              className="pt-0"
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+            >
+              <div className="flex items-center justify-end">
+                <IconButton
+                  onClick={() => {
+                    copy(link.url);
+                    setCopied(i);
+                  }}
+                  onMouseLeave={() => setCopied(null)}
+                  variant="text"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+                >
+                  {copied === i ? <Check /> : <Copy />}
+                </IconButton>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  aria-label="Visit external link"
+                >
+                  <IconButton
+                    variant="text"
+                    placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
+                  >
+                    <ExternalLink />
+                  </IconButton>
+                </a>
+              </div>
+            </CardFooter>
+          </Card>
+        ))}
+    </div>
+  );
 }

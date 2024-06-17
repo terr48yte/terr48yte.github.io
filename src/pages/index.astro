@@ -1,20 +1,12 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Header from "@components/header";
-import CardWithLink from "@components/card";
-import logo from "@assets/logo.png";
+import Header from "@components/Header";
+import CardWithLink from "@components/Card";
 ---
 
 <Layout title="Welcome to Astro.">
   <main class="flex flex-col justify-center items-center min-h-screen m-auto">
-    <Header
-      client:only="react"
-      img={logo.src}
-      slogan="Information Technology Club of SMA Negeri 48 Jakarta"
-      title="TERR48YTE"
-    />
-    <div class="grid flex-row md:flex-col md:grid-cols-2 xl:grid-cols-3 gap-8">
-      <CardWithLink client:only="react" />
-    </div>
+    <Header client:only="react" />
+    <CardWithLink client:only="react" />
   </main>
 </Layout>

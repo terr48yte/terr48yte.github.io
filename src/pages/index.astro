@@ -1,20 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import DropdownMenu from "../components/dropdown-menu";
-import BanHead from "@components/banhead";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/header";
 import logo from "@assets/logo.png";
-
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <!-- <DropdownMenu client:only="react" /> -->
-    <BanHead
+  <main class="flex flex-col justify-center items-center min-h-screen m-auto">
+    <Header
       client:only="react"
       img={logo.src}
       slogan="Information Technology Club of SMA Negeri 48 Jakarta"
       title="TERR48YTE"
     />
-    <!-- <img src={logo.src}/> -->
   </main>
 </Layout>

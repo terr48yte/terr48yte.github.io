@@ -2,11 +2,14 @@
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header";
 import CardWithLink from "@components/Card";
+import Bgan from "@components/Bgan";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="flex flex-col justify-center items-center min-h-screen m-auto">
-    <Header client:only="react" />
-    <CardWithLink client:only="react" />
+  <main class=" bg-[url('https://wallpapercave.com/wp/vSb3JKZ.jpg')] bg-cover  bg-center">
+    <div class=" bg-black/80 backdrop-blur-[40px] min-h-screen flex flex-col justify-center items-center overflow-hidden backdrop-hue-rotate-90">
+        <Header client:only="react" />
+        <CardWithLink client:only="react" />
+    </div>
   </main>
 </Layout>

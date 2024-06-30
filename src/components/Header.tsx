@@ -21,7 +21,7 @@ export default function Header() {
         src={props.img}
         alt="logo"
       />
-      <Typography
+      <Typography className="text-gray-100"
         variant="h1"
         placeholder={undefined}
         onPointerEnterCapture={undefined}

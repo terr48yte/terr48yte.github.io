@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <div className="flex flex-col items-center justify-center gap-2 group/head text-center">
       <img
-        className="rounded-full size-36 group-hover/head:saturate-0"
+        className="rounded-full size-32 group-hover/head:saturate-0"
         src={props.img}
         alt="logo"
       />

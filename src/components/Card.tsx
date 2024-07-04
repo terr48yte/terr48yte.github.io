@@ -75,7 +75,11 @@ export default function CardWithLink() {
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
           >
-            <CardHeader  className="relative">
+            <CardHeader
+              className="relative"
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}>
               <img src={link.img}
               className="aspect-[6/3] object-cover"
               alt="banner"

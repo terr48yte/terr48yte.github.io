@@ -1,5 +1,5 @@
 import { Typography } from "@material-tailwind/react";
-import logo from "@assets/logo.png";
+import image from "@assets/image.png";
 
 interface Props {
   img: string;
@@ -8,21 +8,22 @@ interface Props {
 }
 
 const props: Props = {
-  img: logo.src,
+  img: image.src,
   slogan: "Information Technology Club of SMA Negeri 48 Jakarta",
   title: "TERR48YTE",
 };
 
 export default function Header() {
   return (
-    <div className="flex flex-col items-center justify-center gap-2 group/head text-center">
+    <div className="flex flex-col items-center justify-center gap-2  text-center">
       <img
-        className="rounded-full size-32 group-hover/head:saturate-0"
+        className="rounded-full size-32 "
         src={props.img}
         alt="logo"
       />
       <Typography
         variant="h1"
+        className="text-[#FCFEFF]"
         placeholder={undefined}
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}
@@ -31,6 +32,7 @@ export default function Header() {
       </Typography>
       <Typography
         variant="paragraph"
+        className="text-[#FCFEFF]"
         placeholder={undefined}
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}

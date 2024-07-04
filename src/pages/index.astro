@@ -5,10 +5,14 @@ import CardWithLink from "@components/Card";
 ---
 
 <Layout title="TERR48YTE LINKTREE">
-  <main
-    class="flex flex-col justify-center items-center min-h-screen px-4 py-8 m-auto max-w-6xl"
-  >
-    <Header client:only="react" />
-    <CardWithLink client:only="react" />
-  </main>
+  <div class="bg-[url('https://fixthephoto.com/images/content/light-overlay-photoshop-71611311891.jpg')] w-full bg-cover bg-right">
+    <div
+    id="ld"
+      class="flex flex-col justify-center items-center min-h-screen px-4 py-8 m-auto w-full backdrop-blur-[10px] backdrop-hue-rotate-180"
+    >
+    <div id="la" class="min-h-[30vh] md:min-h-[40vh] lg:min-h-[50vh] w-full fixed bottom-0 z-10"></div>
+      <Header client:only="react" />
+      <CardWithLink client:only="react" />
+    </div>
+  </div>
 </Layout>

@@ -11,7 +11,11 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="official terr48byte website 😎☕" />
+    <meta name="og:title" content="terr48yte" />
+    <meta name="og:description" content="official terr48byte website 😎☕" />
+    <meta property="og:type" content="website" />
+    <meta name="og:site" content="@terr48yte" />
+    <meta name="og:image" content="/TERR48YTE.png" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -22,10 +26,7 @@ const { title } = Astro.props;
       content="official terr48byte website 😎☕"
     />
     <meta name="twitter:image" content="/TERR48YTE.png" />
-    <meta name="site" content="@terr48yte" />
-    <meta name="og:image" content="/TERR48YTE.png" />
-    <meta name="image" content="/TERR48YTE.png" />
-    <meta name="generator" content={Astro.generator} />
+    <!-- <meta name="generator" content={Astro.generator} /> -->
     <title>{title}</title>
   </head>
   <body class="bg-[#0c0d13]">

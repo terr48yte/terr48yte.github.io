@@ -33,7 +33,7 @@ const props: Props = [
     icon: <Instagram size={40} color="#FCFEFF" />,
     img: Insta.src,
     url: "https://instagram.com/itclub48",
-    desc: "@itclub48 | 🍜"
+    desc: "@itclub48 | some result activity from ekstrakurikuler🍜"
   },
   {
     name: "Discord",
@@ -59,7 +59,7 @@ const props: Props = [
     icon: <Youtube size={40} color="#FCFEFF" />,
     img: Yt.src,
     url: "https://youtube.com/@terr48yte",
-    desc: "@terr48yte | 🍿"
+    desc: "@terr48yte | yokyub🍿"
   },
 
 ];

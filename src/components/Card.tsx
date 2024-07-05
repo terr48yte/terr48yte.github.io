@@ -69,7 +69,7 @@ export default function CardWithLink() {
   const [copied, setCopied] = useState<number | null>(null);
 
   return (
-    <div className="md:grid md:flex-col md:grid-cols-2 xl:grid-cols-3 gap-4 mt-8 items-center justify-center md:px-10 w-full flex flex-col max-w-6xl">
+    <div className="md:grid md:flex-col md:grid-cols-2 xl:grid-cols-3 gap-4 mt-8 items-center justify-center md:px-16 w-full flex flex-col max-w-6xl">
       {
         props?.map((link, i) => (
           <Card

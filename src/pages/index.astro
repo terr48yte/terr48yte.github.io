@@ -1,17 +1,23 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header";
+import Header from "@components/Header.astro";
 import CardWithLink from "@components/Card";
 ---
 
-<Layout title="TERR48YTE LINKTREE">
-  <div class="bg-[url('https://fixthephoto.com/images/content/light-overlay-photoshop-71611311891.jpg')] w-full bg-cover bg-right">
+<Layout title="TERR48YTE">
+  <div
+    class="bg-[url('https://fixthephoto.com/images/content/light-overlay-photoshop-71611311891.jpg')] w-full bg-cover bg-right"
+  >
     <div
-    id="ld"
+      id="ld"
       class="flex flex-col justify-center items-center min-h-screen px-4 py-8 m-auto w-full backdrop-blur-[10px] backdrop-hue-rotate-180"
     >
-    <div id="la" class="min-h-[30vh] md:min-h-[40vh] lg:min-h-[50vh] w-full fixed bottom-0 z-10"></div>
-      <Header client:only="react" />
+      <div
+        id="la"
+        class="min-h-[30vh] md:min-h-[40vh] lg:min-h-[50vh] w-full fixed bottom-0 z-10"
+      >
+      </div>
+      <Header />
       <CardWithLink client:only="react" />
     </div>
   </div>

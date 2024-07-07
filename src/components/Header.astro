@@ -1,0 +1,33 @@
+---
+import logo from "@assets/logo.svg";
+import type { HeaderProps } from "@lib/types";
+
+const props: HeaderProps = {
+  img: logo.src,
+  slogan: "TECHNOLOGY WITHOUT LIMITS",
+  title: "TERR48YTE",
+};
+---
+
+<div
+  class="flex flex-col items-center justify-center gap-2 text-center text-content"
+>
+  <img class="rounded-full size-24" src={props.img} alt="logo" />
+  <h1 class="text-4xl md:text-5xl font-bold mt-4 tracking-widest">
+    {props.title}
+  </h1>
+  <p class="text-sm md:text-base">{props.slogan}</p>
+</div>
+
+<style>
+  @font-face {
+    font-family: "futuralumine";
+    src: url("/fonts/futuralumine.ttf");
+  }
+  h1 {
+    font-family: "futuralumine", sans-serif;
+  }
+  p {
+    font-family: "lexend", sans-serif;
+  }
+</style>

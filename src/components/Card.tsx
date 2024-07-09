@@ -5,7 +5,6 @@ import {
   IconButton,
   CardHeader,
 } from "@material-tailwind/react";
-import { Check, Copy, Github, Instagram, Youtube } from "lucide-react";
 import { useState } from "react";
 import { useCopyToClipboard } from "usehooks-ts";
 import Discord from "@assets/discord.png";

@@ -1,7 +1,6 @@
 import {
   Card,
   CardBody,
-  Typography,
   IconButton,
   CardHeader,
 } from "@material-tailwind/react";
@@ -98,9 +97,9 @@ export default function CardWithLink() {
                 className="ml-auto"
               >
                 {copied === i ? (
-                  <Check color="#FCFEFF" />
+                  <i className="fa-solid fa-check fa-2xl text-content"></i>
                 ) : (
-                  <Copy color="#FCFEFF" />
+                  <i className="fa-regular fa-copy fa-2xl text-content"></i>
                 )}
               </IconButton>
             </div>

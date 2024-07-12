@@ -6,13 +6,29 @@ import {
 } from "@material-tailwind/react";
 import { useState } from "react";
 import { useCopyToClipboard } from "usehooks-ts";
-import Discord from "@assets/discord.png";
-import Insta from "@assets/instagram.webp";
-import Git from "@assets/github.png";
-import Yt from "@assets/youtube.jpg";
 import type { CardProps } from "@lib/types";
+import Discord from "@assets/card/discord.png";
+import Insta from "@assets/card/instagram.webp";
+import Git from "@assets/card/github.png";
+import Yt from "@assets/card/youtube.jpg";
+import Join from "@assets/card/join.svg";
+import Website from "@assets/card/website.jpg";
 
 const props: CardProps[] = [
+  {
+    name: "Join",
+    icon: "fa-solid fa-pen-to-square",
+    img: Join.src,
+    url: "https://terr48yte.vercel.app/join",
+    desc: "Register yourself for our IT Club.",
+  },
+  {
+    name: "Website",
+    icon: "fa-solid fa-globe",
+    img: Website.src,
+    url: "https://terr48yte.vercel.app",
+    desc: "Visit our website to find out more about extracurricular.",
+  },
   {
     name: "Instagram",
     icon: "fa-brands fa-instagram",
@@ -27,7 +43,6 @@ const props: CardProps[] = [
     url: "https://dsc.gg/terr48yte",
     desc: "Join our tech community on Discord.",
   },
-
   {
     name: "Github",
     icon: "fa-brands fa-github",

@@ -11,7 +11,7 @@ import Discord from "@assets/card/discord.png";
 import Insta from "@assets/card/instagram.webp";
 import Git from "@assets/card/github.png";
 import Yt from "@assets/card/youtube.jpg";
-import Join from "@assets/card/join.svg";
+import Join from "@assets/card/join.jpg";
 import Website from "@assets/card/website.jpg";
 
 const props: CardProps[] = [
